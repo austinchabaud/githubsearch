@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
-import 'font-awesome/css/font-awesome.min.css';
+import PropTypes from 'prop-types'
 
-export class Navbar extends Component {
+class Navbar extends Component {
+    static defaultProps = {
+        title: 'GitHub Finder',
+        icon: 'fa fa-github'
+    }
+
+    static propTypes = {
+        title: PropTypes.string.isRequired,
+        icon: PropTypes.string.isRequired
+    }
     render() {
         return (
             <nav className="navbar bg-primary">
                 <h1>
-                <i class="fa fa-github"></i> Navbar
+                <i className={this.props.icon}></i> {this.props.title}
        </h1>
             </nav>
         )
