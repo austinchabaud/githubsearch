@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Spinner from '../layout/Spinner';
 import PropTypes from 'prop-types';
+import 'font-awesome/css/font-awesome.min.css';
 import { Link } from 'react-router-dom';
 
 class User extends Component {
@@ -38,6 +39,36 @@ class User extends Component {
 				<Link to='/' className='btn btn-light'>
 					Back to Home
 				</Link>
+				Hireable:{' '}
+				{hireable ? (
+					<i className='fa fa-check text-success' />
+				) : (
+					<i className='fa fa-times-circle text-danger' />
+				)}
+				<div className='card grid-2'>
+					<div className='all-center'>
+						<img
+							src={avatar_url}
+							className='round-img'
+							alt=''
+							style={{ width: '150px' }}
+						/>
+						<h1>{name}</h1>
+						<p>Location: {location}</p>
+					</div>
+					<div>
+						{bio && (
+							<Fragment>
+								<h3>Bio</h3>
+								<p>{bio}</p>
+							</Fragment>
+						)}
+						<a href={html_url} className='btn btn-dark my-1'>
+							{' '}
+							Visit GitHub Profile
+						</a>
+					</div>
+				</div>
 			</Fragment>
 		);
 	}
