@@ -7,6 +7,7 @@
 	--light-color: #f4f4f4;
 	--danger-color: #dc3545;
 	--success-color: #28a745;
+	--primary-blue: #539bf5;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
 }
 
 a {
-	color: var(--primary-color);
+	color: var(--primary-blue);
 	text-decoration: none;
 }
 
