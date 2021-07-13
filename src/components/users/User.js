@@ -35,7 +35,7 @@ class User extends Component {
 			public_gists,
 			hireable,
 		} = this.props.user;
-
+		//refactor to hooks
 		const { loading, repos } = this.props;
 
 		if (loading) return <Spinner />;
