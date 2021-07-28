@@ -9,7 +9,7 @@ import Alert from './components/layout/Alert';
 import About from './components/pages/About';
 import axios from 'axios';
 import './App.css';
-// adding chat function soon
+// refactoring
 class App extends Component {
 	state = {
 		users: [],
